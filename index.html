@@ -10,11 +10,34 @@
         <div id="total-ui">
             <h1>Generate a <span id="random-password">random password</span></h1>
             <p>Never use an insecure password again.</p>
-            <button id="button" onclick="showPassword()">Generate passwords</button>
-            <div id="line">
-                <p class="password" id="password1"></p>
-                <p class="password" id="password2"></p>
+            <div id="input-and-button">
+                <input type="number" placeholder="Enter the password length" id="input">
+                <div id="togglebars">
+                    <div id="togglesection">
+                        <p class="toggleheaders">Numbers</p>
+                        <input id=toggle1 class="togglebox" type="checkbox">
+                    </div>
+                    <div id="togglesection">
+                        <p class="toggleheaders">Symbols</p>
+                        <input id=toggle2 class="togglebox" type="checkbox">
+                    </div>
+                </div>
+                <button id="button" onclick="showPassword()">Generate passwords</button>
+                <p id="min-password-length"></p>
+                <p id="max-password-length"></p>
             </div>
+            <div id="line">
+                <div>
+                    <p class="password" id="password1"></p>
+                    <button class="copy" onclick="copy1()">Copy</button>
+                </div>
+                <div>
+                    <p class="password" id="password2"></p>
+                    <button class="copy" onclick="copy2()">Copy</button>
+                </div>
+            </div>
+            <p id="message"></p>
+            <p id="error"></p>
             <script src="index.js"></script>
         </div>
     </body>
